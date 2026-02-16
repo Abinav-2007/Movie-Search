@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>MOVIESDA - Home</title>
+</head>
+
+<body class="bg-gray-900 min-h-screen flex flex-col">
+
+    <div class="flex justify-between items-center p-4 gap-10">
+        <h2 class="text-red-500 text-2xl font-bold pl-5 cursor-pointer">
+            MOVIESDA
+        </h2>
+
+        <div class="flex items-center gap-6">
+            <nav class="flex gap-6">
+                <a href="index.html" class="text-red-500 font-semibold hover:text-red-400 transition-colors">
+                    HOME
+                </a>
+                <a href="#footer" class="text-white font-semibold hover:text-red-400 transition-colors">ABOUT US</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <input
+                    id="search-input"
+                    type="text"
+                    placeholder="Search"
+                    class="bg-white text-black px-4 rounded-3xl h-10 w-70"
+                >
+                <button
+                    id="search-btn"
+                    class="bg-red-500 px-4 py-3 rounded-3xl cursor-pointer mr-5 hover:bg-red-600 transition-colors"
+                >
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col my-5 mt-3 ml-5 flex-grow">
+
+        <div class="flex items-center">
+            <p class="px-2 rounded-3xl flex items-center text-orange-500">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="35"
+                    height="35"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                >
+                    <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/>
+                </svg>
+            </p>
+            <p class="text-white text-xl font-black font-medium flex">
+                Popular
+            </p>
+        </div>
+
+        <div id="movie-container" class="grid grid-cols-6 gap-6 mt-6 pr-6"></div>
+
+        <div class="flex items-center mt-12">
+            <p class="px-2 rounded-3xl flex items-center text-yellow-400">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="35"
+                    height="35"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                >
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+            </p>
+            <p class="text-white text-xl font-black font-medium flex">
+                Top Rated
+            </p>
+        </div>
+
+        <div id="top-rated-container" class="grid grid-cols-6 gap-6 mt-6 pr-6"></div>
+
+    </div>
+
+    <footer id="footer" class="bg-gray-950 text-gray-400 py-8 mt-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <div class="flex-col>
+                    <h3>class="text-red-500 text-xl font-bold mb-4>MOVIESDA</h3>
+                    <p class="text-sm">
+                        Your ultimate destination for discovering movies. Browse popular and top-rated films from around the world.
+                    </p>
+                </div>
+
+
+                <div class="flex-col">
+                    <h4 class="text-white font-semibold mb-4">Information</h4>
+                    <p class="text-sm">Powered by The Movie Database (TMDB) API</p>
+                    <p class="text-sm mt-2">© 2024 MOVIESDA. All rights reserved.</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

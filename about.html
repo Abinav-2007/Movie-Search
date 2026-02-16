@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>About Us - MOVIESDA</title>
+</head>
+
+<body class="bg-gray-900 min-h-screen flex flex-col">
+
+    <div class="flex justify-between items-center p-4 gap-10">
+        <h2 class="text-red-500 text-2xl font-bold pl-5 cursor-pointer">
+            MOVIESDA
+        </h2>
+
+        <div class="flex items-center gap-6">
+            <nav class="flex gap-6">
+                <a href="index.html" class="text-white font-semibold hover:text-red-400 transition-colors">
+                    HOME
+                </a>
+                <a href="about.html" class="text-red-500 font-semibold hover:text-red-400 transition-colors">
+                    ABOUT US
+                </a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <input
+                    id="search-input"
+                    type="text"
+                    placeholder="Search"
+                    class="bg-white text-black px-4 rounded-3xl h-10 w-70"
+                >
+                <button
+                    id="search-btn"
+                    class="bg-red-500 px-4 py-3 rounded-3xl cursor-pointer mr-5 hover:bg-red-600 transition-colors"
+                >
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-grow container mx-auto px-6 py-12">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl font-bold text-white mb-8">
+                About MOVIESDA
+            </h1>
+
+            <div class="bg-gray-800 rounded-xl p-8 mb-8">
+                <h2 class="text-2xl font-semibold text-red-500 mb-4">
+                    Our Mission
+                </h2>
+                <p class="text-gray-300 leading-relaxed">
+                    MOVIESDA is your ultimate destination for discovering and exploring movies from around the world.
+                    We provide a seamless platform to browse popular releases, top-rated classics, and search for your
+                    favorite films with ease.
+                </p>
+            </div>
+
+            <div class="bg-gray-800 rounded-xl p-8 mb-8">
+                <h2 class="text-2xl font-semibold text-red-500 mb-4">
+                    What We Offer
+                </h2>
+                <ul class="space-y-3 text-gray-300">
+                    <li class="flex items-start">
+                        <span class="text-yellow-400 mr-3">⭐</span>
+                        <span>Browse trending and popular movies updated in real-time</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-yellow-400 mr-3">⭐</span>
+                        <span>Discover top-rated films across all genres</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-yellow-400 mr-3">⭐</span>
+                        <span>Powerful search functionality to find any movie instantly</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-yellow-400 mr-3">⭐</span>
+                        <span>Comprehensive movie information including ratings and posters</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-gray-800 rounded-xl p-8">
+                <h2 class="text-2xl font-semibold text-red-500 mb-4">
+                    Powered By
+                </h2>
+                <p class="text-gray-300 leading-relaxed">
+                    Our platform is powered by
+                    <span class="text-white font-semibold">The Movie Database (TMDB)</span>,
+                    one of the most comprehensive and reliable sources for movie information worldwide. This ensures
+                    you get accurate, up-to-date information about every film.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-950 text-gray-400 py-8 mt-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <div>
+                    <h3 class="text-red-500 text-xl font-bold mb-4">MOVIESDA</h3>
+                    <p class="text-sm">
+                        Your ultimate destination for discovering movies. Browse popular and top-rated films from around the world.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>
+                            <a href="index.html" class="hover:text-red-400 transition-colors">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="hover:text-red-400 transition-colors">About Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Information</h4>
+                    <p class="text-sm">Powered by The Movie Database (TMDB) API</p>
+                    <p class="text-sm mt-2">© 2024 MOVIESDA. All rights reserved.</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function setupSearch() {
+            const input = document.getElementById("search-input");
+            const button = document.getElementById("search-btn");
+
+            if (!input || !button) return;
+
+            function goToResults() {
+                const query = input.value.trim();
+                if (query) {
+                    window.location.href = `results.html?query=${encodeURIComponent(query)}`;
+                }
+            }
+
+            button.addEventListener("click", goToResults);
+            input.addEventListener("keypress", (e) => {
+                if (e.key === "Enter") goToResults();
+            });
+        }
+
+        setupSearch();
+    </script>
+
+</body>
+</html>

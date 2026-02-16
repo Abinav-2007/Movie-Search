@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Search Results - MOVIESDA</title>
+</head>
+
+<body class="bg-gray-900 min-h-screen flex flex-col">
+
+    <div class="flex justify-between items-center p-4 gap-10">
+        <h2 class="text-red-500 text-2xl font-bold pl-5 cursor-pointer">
+            MOVIESDA
+        </h2>
+
+        <div class="flex items-center gap-6">
+            <nav class="flex gap-6">
+                <a href="index.html" class="text-white font-semibold hover:text-red-400 transition-colors">
+                    HOME
+                </a>
+                <a href="index.html#footer" class="text-white font-semibold hover:text-red-400 transition-colors">
+                    ABOUT US
+                </a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <input
+                    id="search-input"
+                    type="text"
+                    placeholder="Search"
+                    class="bg-white text-black px-4 rounded-3xl h-10 w-70"
+                >
+                <button
+                    id="search-btn"
+                    class="bg-red-500 px-4 py-3 rounded-3xl cursor-pointer mr-5 hover:bg-red-600 transition-colors"
+                >
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col my-5 mt-14 ml-5 flex-grow">
+        <div class="flex items-center justify-between pr-6">
+            <p class="text-white text-xl font-black font-medium flex">
+                SEARCH RESULTS
+            </p>
+            <p id="result-count" class="text-gray-400 text-sm"></p>
+        </div>
+
+        <div id="results-container" class="grid grid-cols-6 gap-6 mt-6 pr-6"></div>
+
+        <div id="no-results" class="hidden text-center py-12">
+            <p class="text-gray-400 text-xl">
+                No results found
+            </p>
+            <p class="text-gray-500 text-sm mt-2">
+                Try searching with different keywords
+            </p>
+        </div>
+    </div>
+
+    <footer id="footer" class="bg-gray-950 text-gray-400 py-8 mt-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <div>
+                    <h3 class="text-red-500 text-xl font-bold mb-4">MOVIESDA</h3>
+                    <p class="text-sm">
+                        Your ultimate destination for discovering movies. Browse popular and top-rated films from around the world.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>
+                            <a href="index.html" class="hover:text-red-400 transition-colors">Home</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Information</h4>
+                    <p class="text-sm">Powered by The Movie Database (TMDB) API</p>
+                    <p class="text-sm mt-2">© 2024 MOVIESDA. All rights reserved.</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="results.js"></script>
+</body>
+</html>
